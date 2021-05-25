@@ -1,38 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none !important;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1150px;
+    margin: 0px auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Merriweather', serif;
+}
+
+:root {
+    --primary-color: #e7931a;
+    --secondary-color: #343434;
+}
+
+.title-seperator {
+    width: 100px;
+    margin: 0 auto;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    overflow: hidden;
+}
+
 .App {
-  text-align: center;
+    height: 100%;
+    overflow-y: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* html,
+body,
+#root {
+    height: 100%;
+    overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App {
+    height: 100%;
+    overflow-y: auto;
+} */
+
+.scroll-bg {
+    background: #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header {
+    padding: 30px 0px;
+    /* background: var(--secondary-color); */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 
-.App-link {
-  color: #61dafb;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header .header-logo h2 a {
+    color: #fff;
+}
+
+header .header-menu ul {
+    display: flex;
+}
+
+header .header-menu ul li:not(:last-child) a {
+    margin-right: 20px;
+}
+
+header .header-menu ul li a.active {
+    background: var(--primary-color);
+}
+
+header .header-menu ul li a {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    color: #fff;
+    padding: 8px 10px;
+    transition: all .2s;
+    border-radius: 6px;
+}
+
+header .header-menu ul li a:hover {
+    background: var(--primary-color);
+}
+
+.banner {
+    background-image: url("https://livedemo00.template-help.com/wt_58900/images/slider-3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* height: 500px; */
+    padding: 150px 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.banner h1,
+.banner h3 {
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+.banner h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.banner h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+}
+
+.banner p {
+    font-size: 20px;
+    padding: 0px 120px;
+    font-weight: 300;
+    line-height: 1.5em;
+    margin-bottom: 80px;
+}
+
+.banner .with-bg-link {
+    background: var(--primary-color);
+    padding: 14px 35px;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    border-radius: 8px;
+    color: #fff;
+    transition: .3s;
+}
+
+.banner .with-bg-link:hover {
+    background: var(--secondary-color);
+}
+
+.banner .without-bg-link {
+    border: 2px solid #fff;
+    padding: 12px 35px;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    border-radius: 8px;
+    color: #fff;
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.banner .without-bg-link:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.main-services {
+    padding: 90px 0px;
+}
+
+.main-services .service-title {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.main-services .title-seperator {
+    margin-bottom: 50px;
+}
+
+.main-services .services {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-services .single-service {
+    width: 23%;
+    text-align: center;
+}
+
+.main-services .single-service img {
+    width: 100%;
+}
+
+.main-services .single-service h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    line-height: 1.4em;
+}
+
+.main-services .single-service p {
+    font-weight: 300;
+    line-height: 1.6em;
+}
+
+.counters {
+    padding: 90px 0px;
+    background: #f3f0eb;
+}
+
+.counters .counter-title {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.counters .counter-main {
+    display: flex;
+    margin-top: 50px;
+    padding: 0px 70px;
+    justify-content: space-between;
+}
+
+.counters .counter-main .counter-box {
+    text-align: center;
+}
+
+.counter-box h2 {
+    font-size: 65px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.counter-box p {
+    font-weight: 300;
+    font-size: 22px;
+}
+
+.contact-us {
+    background-image: url("https://livedemo00.template-help.com/wt_58900/images/index-11.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 90px 0px;
+}
+
+.contact-us .contact-us-title {
+    text-align: center;
+    color: #fff;
+}
+
+.contact-us .title-seperator {
+    background-color: #fff;
+    margin-bottom: 40px;
+}
+
+.contact-us-title h2 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+}
+
+.contact-us form {
+    text-align: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+form div {
+    width: 100%;
+}
+
+form div input {
+    width: 44%;
+    margin: 15px;
+    height: 60px;
+    border-radius: 8px;
+    padding: 20px;
+    border: none;
+}
+
+form textarea {
+    width: 93%;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-us form .submit-btn button {
+    background: var(--primary-color);
+    padding: 14px 35px;
+    font-size: 25px;
+    font-family: 'Merriweather', serif;
+    border-radius: 8px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: .3s;
+}
+
+.contact-us form .submit-btn button:hover {
+    background: var(--secondary-color);
 }
